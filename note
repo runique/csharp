@@ -1,13 +1,23 @@
 
 export PATH=$PATH:/d/go/bin
-alias b="go build ." 
+alias b="go build ."
 alias c="go clean"
+alias d="dirs -p -v"
+alias p="pushd"
+alias u0="pushd +0"
+alias u1="pushd +1"
+alias u2="pushd +2"
+alias u3="pushd +3"
+alias u4="pushd +4"
+alias u5="pushd +5"
+alias u6="pushd +6"
+alias u7="pushd +7"
 
-alias u0="pushd -0"
-alias u1="pushd -1"
-alias u2="pushd -2"
-alias u3="pushd -3"
-alias u4="pushd -4"
-alias u5="pushd -5"
-
-alias d="dirs -v"
+alias p0="popd +0"
+alias p1="popd +1"
+alias p2="popd +2"
+alias p3="popd +3"
+alias p4="popd +4"
+alias p5="popd +5"
+alias p6="popd +6"
+alias p7="popd +7"2017/9/4
