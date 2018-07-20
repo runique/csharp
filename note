@@ -23,3 +23,33 @@ alias p6="popd +6"
 alias p7="popd +7"2017/9/4
 
 http://html.com/tags/hr/
+
+samba简易搭建说明
+
+1. 需求
+  对centos7 上的文件，在windows上可进行读写访问
+  
+2. 方法
+  centos通过yum安装samba, yum install samba
+  
+  备份后编辑/et/samba/smb.conf, 示例如下：
+  [global]
+        workgroup = WORKGROUP
+        server string = Samba Server %v
+        netbios name = centos
+        security = user
+        smb passwd file = /etc/samba/smbpasswd
+  #============================ Share Definitions ============================== 
+  [root]
+        path = /opt
+        browsable =yes
+        writable = yes
+        guest ok = yes
+        read only = no
+        
+  执行命令，生成smb用户的密码（此处用户为root）:
+  smbpasswd -a root
+  
+  此后在windows下按centos7 ip访问即可，也可以映射为网络驱动器。
+        
+  
